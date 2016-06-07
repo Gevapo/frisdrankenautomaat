@@ -1,4 +1,4 @@
 Frisdrankautomaat
 =================
 
-An small PHP MVC exercise.
+A small PHP MVC exercise.
