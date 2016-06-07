@@ -1,0 +1,80 @@
+{% extends 'default.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <form role="form" action="index.php?action=push"  method="post" autocomplete="off">
+        <div class="munten">    
+            <ul>
+                <li>
+                    <div class="cent">
+                        <img src="/frisdrank/public/img/1cent.gif">
+                        <input class="btn btn-alt" type="submit" name="invoer" value="1 cent">
+                    </div>
+                </li>
+                <li>
+                    <div class="cent">
+                        <img src="/frisdrank/public/img/2cent.gif">
+                        <input class="btn btn-alt" type="submit" name="invoer" value="2 cent">
+                    </div>
+                </li>
+                <li>
+                    <div class="cent">
+                        <img src="/frisdrank/public/img/5cent.gif">
+                        <input class="btn btn-alt" type="submit" name="invoer" value="5 cent">
+                    </div>
+                </li>
+                <li>
+                    <div class="cent">
+                        <img src="/frisdrank/public/img/10cent.gif">
+                        <input class="btn btn-alt" type="submit" name="invoer" value="10 cent">
+                    </div>
+                </li>
+                <li>
+                    <div class="cent">
+                        <img src="/frisdrank/public/img/20cent.gif">
+                        <input class="btn btn-alt" type="submit" name="invoer" value="20 cent">
+                    </div>
+                </li>
+                <li>
+                    <div class="cent">
+                        <img src="/frisdrank/public/img/50cent.gif">
+                        <input class="btn btn-alt" type="submit" name="invoer" value="50 cent">
+                    </div>
+                </li>
+                <li>
+                    <div class="cent">
+                        <img src="/frisdrank/public/img/1euro.gif">
+                        <input class="btn btn-alt" type="submit" name="invoer" value="1 euro">
+                    </div>
+                </li>
+                <li>
+                    <div class="cent">
+                        <img src="/frisdrank/public/img/2euro.gif">
+                        <input class="btn btn-alt" type="submit" name="invoer" value="2 euro">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="body-wrapper clearFix">
+            <div class="dranken-wrapper">
+                <ul>
+                    {% for drank in drankenLijst %}
+                        <div class="dranken">
+                            <li>
+                                <button {% if drank.voorraad <= 0 %} disabled {% endif %} class="drank0{{drank.id}}" type="submit" name="dranken" value="{{drank.id}}"></button>
+                                <label>{% if drank.voorraad <= 0 %} Leeg {% else %} &euro; {{drank.prijs}}{% endif %}</label>
+                            </li>
+                        </div>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="display-wrapper">
+                <div >
+                    <textarea class="display" disabled>{{ display }}</textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %} 

@@ -1,0 +1,358 @@
+
+/* 
+    Created on : 14-dec-2015, 14:00:36
+    Author     : gevapo <info at gevapo.be>
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Asap);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+@charset "utf-8";
+
+/*  =========================================================================
+    Typography
+    ========================================================================= */
+/*  font-size: 100% : Is in principe onnodig maar lost een probleem op dat 
+    voorkomt in IE7 bij het in-en uitzoomen op het scherm. Niets zeggen of 
+    100% betekent dat de standaardlettergrootte 16px is (in bijna alle 
+    browsers). Dit is dan het vertrekpunt voor alle andere lettergroottes 
+    die we vanaf nu in em zullen specificeren, dus nu: 1em = 16px 
+
+    basis 1em = 16px
+      4px = 0.25em
+      6px = 0.375em
+      8px = 0.5em
+     10px = 0.625em
+     12px = 0.75em
+     14px = 0.875em
+     18px = 1.125em
+     20px = 1.25em
+     22px = 1.375em
+     24px = 1.5em
+     32px = 2em
+    100px = 6.25em
+*/
+body,
+input,
+textarea {
+    font: 1em "Asap", sans-serif;//
+    //font: 1em "Open Sans", sans-serif;
+    font-size: 100%;
+}
+/*  We stellen de dikte van de koppen in op normal (standaard bold) */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+h1, h2, h3, h5 {
+    margin-bottom: 1.375em;   //22px
+}
+h1 {
+    font-size: 2.25em;        //36px;
+    line-height: 2.75em;      //44px;
+}
+h2 {
+    font-size: 1.5em;         //24px
+    line-height: 2.75em;      //44px;
+}
+h3 {
+    font-size: 1.3125em;      //21px;
+}
+h4 {
+    margin-top: 0.5em;        //22px
+    margin-bottom: 0.2em;
+}
+h4, .flash {
+    font-size: 1.125em;       //18px
+
+}
+h5 {
+    color: #a9b2b9;
+    font-size: 0.875em;       //14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+form p {
+    margin-top: 0.1em;        //22px
+    margin-bottom: 0.2em;
+}
+strong,
+code {
+    font-weight: 400;
+}
+cite,
+em {
+    font-style: italic;
+}
+
+
+/*  =========================================================================
+    Custom styles
+    ========================================================================= */
+
+*, 
+:after, 
+:before {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.main-wrapper {
+
+    //width: 650px;     /* fixed lay-out: vaste breedte in pixels */
+    margin: 0 auto;     /* container centreren */
+    padding-bottom: 40px;
+    padding-top: 40px;
+    //background-color: lightgray;
+}
+
+.body-wrapper {
+    //background-color: tan;
+    width: 800px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    //outline:1px dashed red;
+}
+
+.nav-wrapper {
+    margin: 0 auto;     /* container centreren */
+    //text-align: right;
+    width: 290px;
+    padding: 0.5em;
+}
+
+.nav-wrapper li {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+.dranken-wrapper {
+    //background-color: wheat;
+    margin: 0;
+    float: left;
+    width: 200px;
+    //height: 400px;
+    
+}
+
+.display-wrapper {
+    width: 500px;
+    margin: 0;
+    height: 400px;
+    float: right;
+    //outline:1px dashed red;    
+}
+
+.display {
+    font: 1em "Inconsolata", sans-serif;
+    color: red;
+    background-color: black;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.munten {
+    width: 802px;
+    margin: 0 auto;     /* container centreren */
+    //padding-bottom: 40px;
+    //background-color: #a9b2b9;
+    border: 2px solid #752f05;
+}
+
+.cent {
+    width: 96px;
+} 
+
+img {
+    //padding-left: -100px;
+    height: 100px;
+    width: 100px;
+    vertical-align: top;
+    margin: 0;
+    //border-radius: 5px;
+}
+
+
+
+
+ul {
+    margin: 0 auto;
+    //outline:1px dashed red;
+}
+li {
+    //float: left;
+    display: inline-block;
+    margin: 0 auto;
+    //vertical-align: top;
+    //margin-bottom: 10px;
+}
+
+input {
+    padding: 0;
+}
+
+
+input[type="submit"] {
+    padding: 5px 0;
+    margin: 0;
+    border: none;
+}
+input[type="submit"]:hover {
+    color: #752f05
+}
+
+
+.btn-alt {
+    border: 1px solid #fff;
+    padding: 10px 20px;
+}
+.btn {
+    //border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: .5px;
+    margin: 0;
+    text-transform: uppercase;
+    width: 100px;
+    //float: left;
+}
+
+
+
+button {
+    border: none;
+}
+
+/*  =========================================================================
+    DrankenLijst
+    ========================================================================= */
+
+.dranken-wrapper li {
+    display: list-item;
+    //outline: 1px dashed green;
+}
+
+.dranken {
+    height: 75px;
+    border: 1px solid wheat;
+}
+
+.dranken button:hover {
+    outline: 1px solid green;
+}
+
+.dranken button:disabled {
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.dranken label {
+    //font-size: 1.3125em;      //21px;
+    font-size: 2.25em;        //36px;
+    padding-top: 0.4em;
+    float: right;
+    height: 72px;
+    //outline: 1px dashed red;
+}
+
+.drank01,
+.drank02,
+.drank03,
+.drank04,
+.drank05,
+.drank06,
+.drank07,
+.drank08,
+.drank09
+{
+    background-color: white;
+    background-repeat: no-repeat;
+    width: 72px;
+    height: 72px;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.drank01 {
+    background-image: url(../img/7up_blikje.jpg);
+}
+
+.drank02 {
+    background-image: url(../img/AquariusLemon_blikje.jpg);
+}
+
+.drank03 {
+    background-image: url(../img/AquariusOrange_blikje.jpg);
+}
+
+.drank04 {
+    background-image: url(../img/Cola_blikje.jpg);
+}
+
+.drank05 {
+    background-image: url(../img/ColaLight_blikje.jpg);
+}
+
+.drank06 {
+    background-image: url(../img/Fanta_blikje.jpg);
+}
+
+.drank07 {
+    background-image: url(../img/Icetea_blikje.jpg);
+}
+
+.drank08 {
+    background-image: url(../img/Spablauw_pet.jpg);
+}
+
+.drank09 {
+    background-image: url(../img/Sparood_pet.jpg);
+}
+
+/*  =========================================================================
+    Screen
+    ========================================================================= */
+textarea:disabled {
+    color: red;
+    background-color: black;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    height: 600px;
+    width: 400px;
+}
+
+/*  =========================================================================
+    Clear
+    ========================================================================= */
+.cf {
+    clear: both;
+}
+
+/*  =========================================================================
+    clearFix hack
+    http://nicolasgallagher.com/micro-clearfix-hack/
+    ========================================================================= */
+
+.clearFix:before,
+.clearFix:after {
+    content: " ";
+    display: table;
+}
+.clearFix:after {
+    clear: both;
+}
+/* enkel voor IE6/7 */
+.clearFix {
+    *zoom: 1;
+}
